@@ -16,7 +16,9 @@ module "logic-app" {
   source = "../../"
 
   enabled             = true
-  name                = "test1"
+  name                = "logic-app"
+  environment         = "test"
+  label_order         = ["name", "environment"]
   location            = module.resource_group.resource_group_location
   resource_group_name = module.resource_group.resource_group_name
 }
