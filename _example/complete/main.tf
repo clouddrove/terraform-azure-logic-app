@@ -13,7 +13,7 @@ module "resource_group" {
 }
 
 module "logic-app" {
-  source = "../../"
+  source = "clouddrove/logic-app/azure"
 
   enabled             = true
   name                = "logic-app"
