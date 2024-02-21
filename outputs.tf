@@ -1,10 +1,10 @@
 output "id" {
-  value       = join("", azurerm_logic_app_workflow.main.*.id)
+  value       = try(azurerm_logic_app_workflow.main[*].id, null)
   description = "The Logic App Workflow ID."
 }
 
 output "access_endpoint" {
-  value       = join("", azurerm_logic_app_workflow.main.*.access_endpoint)
+  value       = try(azurerm_logic_app_workflow.main[*].access_endpoint, null)
   description = "The Access Endpoint for the Logic App Workflow."
 }
 
