@@ -1,5 +1,5 @@
 output "id" {
-  value       = try(azurerm_logic_app_workflow.main[0].id, null)
+  value       = try(azurerm_logic_app_workflow.main[*].id, null)
   description = "The Logic App Workflow ID."
 }
 
