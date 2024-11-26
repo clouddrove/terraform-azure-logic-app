@@ -13,8 +13,8 @@ module "resource_group" {
 }
 
 module "logic-app" {
-  source = "clouddrove/logic-app/azure"
-
+  source              = "clouddrove/logic-app/azure"
+  version             = "1.0.0"
   enabled             = true
   name                = "logic-app"
   environment         = "test"
