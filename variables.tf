@@ -55,19 +55,7 @@ variable "location" {
   description = "Location where resource should be created."
 }
 
-variable "delete" {
-  type        = string
-  default     = "60m"
-  description = "Used when deleting the Resource Group."
-}
-
 ## Logic App
-variable "source_arm_resource_id" {
-  type        = string
-  default     = ""
-  description = "The ID of the Event Grid System Topic ARM Source. Changing this forces a new Event Grid System Topic to be created. e.g. Storage account id or Resource group id or any serivec id."
-}
-
 variable "workflow_schema" {
   type        = string
   default     = null
@@ -78,10 +66,4 @@ variable "workflow_parameters" {
   type        = any
   default     = null
   description = "Specifies a map of Key-Value pairs of the Parameter Definitions to use for this Logic App Workflow. The key is the parameter name, and the value is a JSON encoded string of the parameter definition (see: https://docs.microsoft.com/azure/logic-apps/logic-apps-workflow-definition-language#parameters)."
-}
-
-variable "parameter" {
-  type        = map(any)
-  default     = null
-  description = "A map of Key-Value pairs."
 }
